@@ -1,0 +1,19 @@
+{
+    "name": "node-basic-api",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon server.js"
+    },
+    "author": "Adil",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "1.18.3",
+        "express": "4.16.3",
+        "mongodb": "3.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "1.18.3"
+    }
+}
