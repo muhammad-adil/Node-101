@@ -1,6 +1,9 @@
-Node.js basic api
+# Node.js basic api
 
-Routes
+### Routes
 
-// list all users
+#### list all users
+```sh
 http://localhost:8081/listusers
+
+```
