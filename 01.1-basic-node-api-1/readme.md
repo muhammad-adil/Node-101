@@ -4,6 +4,6 @@
 
 #### list all users
 ```sh
-http://localhost:8081/listusers
+http://localhost:8081/listUsers
 
 ```
