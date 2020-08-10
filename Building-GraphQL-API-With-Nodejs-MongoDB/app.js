@@ -1,9 +1,6 @@
 const Express = require("express");
 const { graphqlHTTP } = require('express-graphql');
-// var { graphqlHTTP } = require('express-graphql');
 var { buildSchema } = require('graphql');
-
-// const ExpressGraphQL = require("express-graphql");
 const GraphQLObjectType = require("graphql").GraphQLObjectType;
 const GraphQLID = require("graphql").GraphQLID;
 const GraphQLString = require("graphql").GraphQLString;
@@ -91,24 +88,8 @@ const schema = new GraphQLSchema({
                 }
             }
         }
-    }),
-    // const SongType = new GraphQLObjectType({
-    //     name: "Song",
-    //     fields: {
-    //         id: { type: GraphQLID },
-    //         title: { type: GraphQLString },
-    //         album: {
-    //             type: AlbumType,
-    //             resolve: (root, args, context, info) => {
-    //                 var album = mockAlbums.find(mockAlbum => mockAlbum.id == root.album);
-    //                 return album;
-    //             }
-    //         }
-    //     }
-    // })
-    
+    }),    
 });
-
 
 
 app.use("/graphql", graphqlHTTP({
@@ -119,45 +100,3 @@ app.use("/graphql", graphqlHTTP({
 app.listen(3000, () => {
     console.log("Listening at :3000");
 });
-
-// const Express = require("express");
-// const ExpressGraphQL = require("express-graphql");
-// const Mongoose = require("mongoose");
-// const {
-//     GraphQLID,
-//     GraphQLString,
-//     GraphQLList,
-//     GraphQLNonNull,
-//     GraphQLObjectType,
-//     GraphQLSchema
-// } = require("graphql");
-
-// var app = Express();
-
-// Mongoose.connect("mongodb://localhost/thepolyglotdeveloper");
-
-// const PersonModel = Mongoose.model("person", {
-//     firstname: String,
-//     lastname: String
-// });
-
-// const PersonType = new GraphQLObjectType({
-//     name: "Person",
-//     fields: {
-//         id: { type: GraphQLID },
-//         firstname: { type: GraphQLString },
-//         lastname: { type: GraphQLString }
-//     }
-// });
-
-// const schema = new GraphQLSchema({});
-
-// app.use("/graphql", ExpressGraphQL({
-//     schema: schema,
-//     graphiql: true
-// }));
-
-// app.listen(3000, () => {
-//     console.log("Listening at :3000...");
-// });
-
